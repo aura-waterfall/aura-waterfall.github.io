@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>My JavaScript Site - Page3</title>
+        <link rel="stylesheet" type="text/css" media="all" href="layout.css" />
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            #bg { 
+                
+                background-image: url("flower.jpg");
+
+                height: 100%; 
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <!--Project requirement 13-->
+    <body onresize = "ughresize()" id="home">
+    <div id = "bg">
+    <div id="wrapper">
+        <div id="header">
+            <!--<img src="banner.png">-->
+            <br>
+        </div>
+        <div id="navbar">
+            <ul class="nav">
+                <!--Project requirement 2-->
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="page1.html#">About</a>
+                    </li>
+                    <li>
+                        <a href="page2.html">A Poem</a>
+                    </li>
+                    <li id="nav-page3">
+                        <a href="#">Personality Test</a>
+                    </li>
+                </ul>
+                <div id="navfill">
+                </div>
+            </div>
+            <div id="content-wrapper">
+                <div style = "color: white;" id="content-inner">
+                    <br />
+                    <div>
+                        <h2 style = "font-size: 50px;text-align: center;">PowerFinders: Find Your Element</h2>
+                    </div>
+                    <p style = "font-size: 20px;text-align: center; font-family: myFirstFont;">This is a personality test I have developed around the four elements - Water, Fire, Air, and Earth.</p>
+                    <p id = "elementshere" style = "font-size: 20px; font-family: myFirstFont;margin-left: 10%;margin-right: 10%;color: white;"></p>
+                    <div id = "elements">
+                    <p id = "question" style = "font-family: myFirstFont; font-size: 35px;text-align: center;margin-bottom: 5px;">1. Choose a color scheme.</p>
+                    <!--Project requirement 4-->
+                    <form id = "theform">
+                        <input style = "margin-top: 25px;" name = "radio" type = "radio" id = "water" value = "a"/>
+                        <label id = "label1" for = "q1" >Blue, Purple, Green</label>
+                        <br />
+                        <input name = "radio" type = "radio" id = "fire" value = "b"/>
+                        <label id = "label2" for = "q1" >Red, Orange, Yellow</label>
+                        <br />
+                        <input name = "radio" type = "radio" id = "air" value = "c"/>
+                        <label id = "label3" for = "q1" >Yellow, Pink, Blue</label>
+                        <br />
+                        <input name = "radio" type = "radio" id = "earth" value = "d"/>
+                        <label id = "label4" for = "q1" >Green, Brown, Red</label>
+                        <br />
+                        <div id = "mydiv">
+                            <br />
+                            <!--Project requirement 12-->
+                            <!--Project requirement 13-->
+                            <span title = "Read my poem to find the password at the end!"> Password: <input style = "color:black;font-family: mySecondFont, Helvetica;font-size: 16px;background-color: white;" onfocus = 'this.style = "color:dimgray;font-family: mySecondFont, Helvetica;font-size: 16px;background-color: #ffd8ea;"' onblur = 'this.style = "color:black;font-family: mySecondFont, Helvetica;font-size: 16px;background-color: #FFFFFF;"' id = "password" type = "text"/></span>
+                        </div>
+                        <br />
+                        <input style = "background-color: #9f9f9f; border: none; padding-top: 2px; padding-bottom: 3px; font-family: myFirstFont;color: white;align-self: center;" type = "submit" onclick = "nextquestion();return false;" value = "Next"/>
+                        </div>
+                    </form>
+				</div>
+            </div>
+            <script type="text/javascript" src='test.js'>
+            </script>
+            <script type="text/javascript">
+                document.title = "PowerFinders Personality Test";
+            </script>
+    </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>My JavaScript Site - Page1</title>
+        <link rel="stylesheet" type="text/css" media="all" href="layout.css" />
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            #bg { 
+                /* The image used */
+                background-image: url("hallway.jpg");
+
+                /* Full height */
+                height: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body onresize = "resize()" id="home">
+    <div id="bg">
+    <div id="wrapper">
+        <div id="header">
+            <!--<img src="banner.png">-->
+            <br>
+        </div>
+        <div id="navbar">
+            <ul class="nav">
+                <!--Project requirement 2-->
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="nav-page1">
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="page2.html">A Poem</a>
+                    </li>
+                    <li>
+                        <a href="page3.html">Personality Test</a>
+                    </li>
+                </ul>
+                <div id="navfill">
+                </div>
+            </div>
+            <div id="content-wrapper">
+                <div style = "margin-left: 2%; color:white;"id="content-inner">
+                    <br />
+                    <br />
+                    <h2 style = "font-family: myFirstFont; font-size: 35px;text-align: center;">About Me</h2>
+                    <p style = "text-align: justify;font-size: 18px;font-family: myFirstFont;margin-left: 20%; margin-right: 20%;" id = "aboutme">Hello! My nickname is Aura and I am going into high school. I love reading, writing, philosophy, and technology. My favorite color is blue. I want to be a physicist when I grow up, and my dream college to attend is MIT. My favorite book genres are fantasy, adventure, and science fiction, and I'm always finding new books to read. I created this site as my final JavaScript project for CTY and have displayed some of my own content, including an original poem and a personality test I developed.</p>
+                    <p style = "text-align: right; font-size: 15px;font-family: myFirstFont;margin-left: 20%; margin-right: 20%;" id = "lastmod1"></p>
+                    <div id = "lastmod" style = "position: absolute; bottom: 140px;">
+                    <table style = "font-size: 16px;font-family: myFirstFont;">
+                        <tr><td>Site stats:</td></tr>
+                        <tr><td id = "t1">This document is located at </td></tr>
+                        <tr><td id = "t2">URLs visited in browser session: </td></tr>
+                        <tr><td id = "t3">You are using </td></tr>
+                        <tr><td id = "t4">Character set: </td></tr>
+                        <tr><td id = "t5">This window's name is </td></tr>
+                        <tr><td id = "t6">The dimensions of this window are </td></tr>
+                        <tr><td id = "t7">Javascript enabled: </td></tr>
+                        <tr><td id = "t8">Cookies enabled: </td></tr>
+                        <tr><td id = "t9"></td></tr>
+                    </table>
+                    </div>
+                    <!--Project requirement 13-->
+                    <button onclick = "toggleStats();" onmouseover = "this.style = 'position: absolute;bottom: 110px; border:none;background-color: dimgray;color:white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;'" style = 'position: absolute;bottom: 110px; border:none;background-color: white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;' onmouseout = 'this.style = "position: absolute;bottom: 110px; border:none;background-color: white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;"'>Hide/show stats</button>
+                    <!--Project requirement 13-->
+                    <span title = "Last year's project"><button onclick = "newWindow();" onmouseover = "this.style = 'position: absolute;bottom: 75px; border:none;background-color: dimgray;color:white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;'" style = 'position: absolute;bottom: 75px; border:none;background-color: white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;' onmouseout = 'this.style = "position: absolute;bottom: 75px; border:none;background-color: white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;"'>See another site by me</button></span>
+                    <!--Project requirement 13-->
+                    <!--Project requirement 16-->
+                    <button onclick = "window.history.back();" onmouseover = "this.style = 'position: absolute;bottom: 40px; border:none;background-color: dimgray;color:white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;'" style = 'position: absolute;bottom: 40px; border:none;background-color: white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;' onmouseout = 'this.style = "position: absolute;bottom: 40px; border:none;background-color: white;padding-bottom: 3px;padding-top: 2px;font-family: myFirstFont;font-size: 14px;"'>Previous page</button>
+				</div>
+            </div>
+    </div>
+    </div>
+    <script type = "text/javascript">
+        //Project requirement 1
+        function newWindow() {
+            //Project requirement 18
+            window.open("http://www.thoughtpool.org/users/1231044/index.html");
+        }
+        //Project requirement 17
+        //Project requirement 23
+        var x = document.lastModified;
+        var y = document.URL;
+        //Project requirement 16
+        var z = history.length;
+        //Project requirement 15
+        var a = navigator.javaEnabled();
+        var b = navigator.appName;
+        var c = navigator.cookieEnabled;
+        //Project requirement 17
+        var d = document.characterSet;
+        //Project requirement 18
+        var e = window.name = "About Me";
+        var f = window.top;
+        var g = window.self;
+        var h = window.innerHeight;
+        var ii = window.innerWidth;
+        document.title = "About"
+        //Project requirement 6
+        //Project requirement 7
+        //Project requirement 17
+        //Project requiremnt 23
+        document.getElementById("lastmod1").innerHTML = "Last modified " + x;
+        document.getElementById("t1").innerHTML += y;
+        document.getElementById("t2").innerHTML += z;
+        document.getElementById("t3").innerHTML += b;
+        document.getElementById("t4").innerHTML += d;
+        document.getElementById("t5").innerHTML += e;
+        document.getElementById("t6").innerHTML += h+ "px by "+ii + "px";
+        //Project requirement 10
+        document.getElementById("t7").innerHTML += (a == true) ? "yes" : "no";
+        document.getElementById("t8").innerHTML += (c == true) ? "yes" : "no";
+        document.getElementById("t9").innerHTML += (f != g) ? "This window is not the topmost window." : "This window is the topmost window.";
+        function resize() {
+            var h = window.innerHeight;
+            var ii = window.innerWidth;
+            document.getElementById("t6").innerHTML = "The dimensions of this window are " + h+ "px by "+ii + "px";
+        }
+        function toggleStats() {
+            var toggle = document.getElementById('lastmod');
+            if (toggle.style.display === 'none') {
+                toggle.style.display = 'block';
+            } else {
+                toggle.style.display = 'none';
+            }
+        }
+    </script>
+    </body>
+</html>

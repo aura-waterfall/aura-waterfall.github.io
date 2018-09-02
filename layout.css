@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-family:myFirstFont;
+    font-weight: lighter;
+} #wrapper {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    
+} #header {
+    padding: 5px 3px;
+    background-color: #FFFFFF;
+} #navbar {
+    background: #FFFFFF;
+    padding: 0;
+    width: 100%;
+    min-width: 53em;
+    color: #FFFFFF;
+	font-family: myFirstFont;
+    font-size: 18px;
+} #content-wrapper {
+    width: 100%;
+} #content-inner {
+    padding: 5px 35px 0 15px;
+} #navfill {
+    clear: both;
+}
+
+ul.nav {
+    padding: 0;
+    margin: 0;
+    float: left;
+	background-color:#FFFFFF;
+    padding-bottom: 30px;
+}
+
+ul.nav li {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.nav li a {
+    padding: .2em 1em;
+    background-color:#FFFFFF;
+    color: #9a9a9a;
+    text-decoration: none;
+    float: left;
+    border-top: solid 1px #FFFFFF;
+    border-right: solid 1px #FFFFFF;
+}
+
+ul.nav li a:hover {
+    color: #888888;
+    text-decoration: underline;
+    background-color: #eaeaea;
+} 
+ul.nav li a:active {
+    color: #000000;
+    text-decoration: underline;
+    background-color: #eaeaea;
+} 
+@font-face {
+    font-family: myFirstFont;
+    src: url(Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(Ubuntu-Regular.ttf);
+}
