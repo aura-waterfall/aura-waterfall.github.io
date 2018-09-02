@@ -35,16 +35,17 @@ var current_user = new user(0, 0, 0, 0);
 //Project requirement 5
 var pass = /KJL84HD/;
 function nextquestion() {
-    var text = document.getElementById("password").value,
-        last = document.getElementById("question").innerHTML,
-        textsearch = text.search(pass),
+     //text = document.getElementById("password").value,
+    var last = document.getElementById("question").innerHTML,
+        //textsearch = text.search(pass),
         Water = document.getElementById("water"),
         Fire = document.getElementById("fire"),
         Air = document.getElementById("air"),
         Earth = document.getElementById("earth");
-    if(textsearch == -1) {
+    /*if(textsearch == -1) {
         window.alert("Please enter the password! Hint: read my poem.");
-    } else if ((!(Water.checked))&&(!(Fire.checked))&&(!(Air.checked))&&(!(Earth.checked))) {
+    } else */
+    if ((!(Water.checked))&&(!(Fire.checked))&&(!(Air.checked))&&(!(Earth.checked))) {
         window.alert("Please choose an answer before going to the next question.");
     } else if (last == questions[9]) {
         if (Water.checked) {
@@ -108,8 +109,8 @@ function nextquestion() {
         } else if (Earth.checked) {
             current_user.earth += 1;
         }
-        var x = document.getElementById("mydiv");
-        x.style.display = "none";
+        //var x = document.getElementById("mydiv");
+        //x.style.display = "none";
         var current = document.getElementById("question").innerHTML;
         //Project requirement 21
         var index1 = questions.indexOf(current);
